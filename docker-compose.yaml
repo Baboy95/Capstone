@@ -7,12 +7,14 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress MYSQL_USER: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
       
   wordpress:
     depends_on:
         -db
+        A
     image: wordpress:latest
         ports:
           -"8000:80"
